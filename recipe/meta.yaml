@@ -1,5 +1,5 @@
 {% set name = "sudachidict-core" %}
-{% set version = "20241021" %}
+{% set version = "20250129" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/SudachiDict-core-{{ version }}.tar.gz
-  sha256: a9d84946f15e040ebf3943ef2b8f0e169c92fb8cf3ce00395bed2698a892069d
+  sha256: 5a8f21e516de0f66e9ef9a5a217398b14ab5d02ecf5dd4cb113b4ee85a0f3ce6
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
